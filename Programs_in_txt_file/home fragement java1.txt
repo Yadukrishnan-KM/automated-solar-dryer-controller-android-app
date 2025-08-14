@@ -1,0 +1,202 @@
+package com.example.one.ui.home;
+
+import static java.lang.Boolean.FALSE;
+import static java.lang.Boolean.TRUE;
+
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.widget.Switch;
+import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.widget.SwitchCompat;
+import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
+
+import com.example.one.R;
+import com.example.one.databinding.FragmentHomeBinding;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.security.PrivateKey;
+
+public class HomeFragment extends Fragment {
+
+    private HomeViewModel homeViewModel;
+    private FragmentHomeBinding binding;
+
+    private FirebaseDatabase database = FirebaseDatabase.getInstance();
+    private DatabaseReference serverDryerRoom1 = database.getReference("Dryer_Room_1");
+    private DatabaseReference serverDryerRoom2 = database.getReference("Dryer_Room_2");
+    private DatabaseReference serverOutside = database.getReference("Outside");
+
+    private TextView textRoom1Temperature,textRoom1Humidity,textRoom2Temperature,textRoom2Humidity,textOutsideTemperature,textOutsideHumidity;
+    private Switch switchRoom1Fan,switchRoom1Valve,switchRoom2Fan,switchRoom2Valve,switchOutsidePump;
+
+    private String room1Temp,room1Hum,room2Temp,room2Hum,outsideTemp,outsideHum;
+    private String room1Fan,room1Valve,room2Fan,room2Valve,outsidePump;
+
+    public View onCreateView(@NonNull LayoutInflater inflater,
+                             ViewGroup container, Bundle savedInstanceState) {
+        homeViewModel =
+                new ViewModelProvider(this).get(HomeViewModel.class);
+
+        binding = FragmentHomeBinding.inflate(inflater, container, false);
+        View root = binding.getRoot();
+
+        textRoom1Temperature = root.findViewById(R.id.room1Card1LinearLayout1Table1Row3Text1);
+        textRoom1Humidity = root.findViewById(R.id.room1Card1LinearLayout1Table1Row3Text2);
+        switchRoom1Fan = root.findViewById(R.id.room1Card1LinearLayout1Table3Row1Switch1);
+        switchRoom1Valve = root.findViewById(R.id.room1Card1LinearLayout1Table3Row1Switch2);
+        textRoom2Temperature = root.findViewById(R.id.room2Card1LinearLayout1Table1Row3Text1);
+        textRoom2Humidity = root.findViewById(R.id.room2Card1LinearLayout1Table1Row3Text2);
+        switchRoom2Fan = root.findViewById(R.id.room2Card1LinearLayout1Table3Row1Switch1);
+        switchRoom2Valve = root.findViewById(R.id.room2Card1LinearLayout1Table3Row1Switch2);
+        textOutsideTemperature = root.findViewById(R.id.outside1Card1LinearLayout1Table1Row3Text1);
+        textOutsideHumidity = root.findViewById(R.id.outside1Card1LinearLayout1Table1Row3Text2);
+        switchOutsidePump = root.findViewById(R.id.outside1Card1LinearLayout1Table3Row1Switch1);
+
+           // Read from the database Dryer_Room_1 node
+
+        serverDryerRoom1.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                room1Temp = dataSnapshot.child("Temperature").getValue().toString();
+                textRoom1Temperature.setText(room1Temp + "*C");
+                room1Hum = dataSnapshot.child("Humidity").getValue().toString();
+                textRoom1Humidity.setText(room1Hum + "%");
+                room1Fan = dataSnapshot.child("Fan_Status").getValue().toString();
+                if (room1Fan.equals("1"))switchRoom1Fan.setChecked(TRUE);
+                else if(room1Fan.equals("0"))switchRoom1Fan.setChecked(FALSE);
+                room1Valve = dataSnapshot.child("Valve_Status").getValue().toString();
+                if (room1Valve.equals("1"))switchRoom1Valve.setChecked(TRUE);
+                else if(room1Valve.equals("0"))switchRoom1Valve.setChecked(FALSE);
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+            }
+        });
+          // Read from the database Dryer_Room_2 node
+
+        serverDryerRoom2.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                room2Temp = dataSnapshot.child("Temperature").getValue().toString();
+                textRoom2Temperature.setText(room2Temp + "*C");
+                room2Hum = dataSnapshot.child("Humidity").getValue().toString();
+                textRoom2Humidity.setText(room2Hum + "%");
+                room2Fan = dataSnapshot.child("Fan_Status").getValue().toString();
+                if (room2Fan.equals("1"))switchRoom2Fan.setChecked(TRUE);
+                else if(room2Fan.equals("0"))switchRoom2Fan.setChecked(FALSE);
+                room2Valve = dataSnapshot.child("Valve_Status").getValue().toString();
+                if (room2Valve.equals("1"))switchRoom2Valve.setChecked(TRUE);
+                else if(room2Valve.equals("0"))switchRoom2Valve.setChecked(FALSE);
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+            }
+        });
+          // Read from the database Outside node
+
+        serverOutside.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                outsideTemp = dataSnapshot.child("Temperature").getValue().toString();
+                textOutsideTemperature.setText(outsideTemp + "*C");
+                outsideHum = dataSnapshot.child("Humidity").getValue().toString();
+                textOutsideHumidity.setText(outsideHum + "%");
+                outsidePump = dataSnapshot.child("Pump_Status").getValue().toString();
+                if (outsidePump.equals("1"))switchOutsidePump.setChecked(TRUE);
+                else if(outsidePump.equals("0"))switchOutsidePump.setChecked(FALSE);
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+            }
+        });
+
+        switchRoom1Fan.setOnClickListener(new OnClickListener(){
+            @Override
+            public void onClick (View v) {
+                if (!switchRoom1Fan.isChecked()) {
+                    serverDryerRoom1.child("Fan_Status").setValue("0");
+                }
+                else if (switchRoom1Fan.isChecked()){
+                    serverDryerRoom1.child("Fan_Status").setValue("1");
+                }
+            }
+        });
+        switchRoom1Valve.setOnClickListener(new OnClickListener(){
+            @Override
+            public void onClick (View v) {
+                if (!switchRoom1Valve.isChecked()) {
+                    serverDryerRoom1.child("Valve_Status").setValue("0");
+                }
+                else if (switchRoom1Valve.isChecked()){
+                    serverDryerRoom1.child("Valve_Status").setValue("1");
+                }
+            }
+        });
+        switchRoom2Fan.setOnClickListener(new OnClickListener(){
+            @Override
+            public void onClick (View v) {
+                if (!switchRoom2Fan.isChecked()) {
+                    serverDryerRoom2.child("Fan_Status").setValue("0");
+                }
+                else if (switchRoom2Fan.isChecked()){
+                    serverDryerRoom2.child("Fan_Status").setValue("1");
+                }
+            }
+        });
+        switchRoom2Valve.setOnClickListener(new OnClickListener(){
+            @Override
+            public void onClick (View v) {
+                if (!switchRoom2Valve.isChecked()) {
+                    serverDryerRoom2.child("Valve_Status").setValue("0");
+                }
+                else if (switchRoom2Valve.isChecked()){
+                    serverDryerRoom2.child("Valve_Status").setValue("1");
+                }
+            }
+        });
+        switchOutsidePump.setOnClickListener(new OnClickListener(){
+            @Override
+            public void onClick (View v) {
+                if (!switchOutsidePump.isChecked()) {
+                    serverOutside.child("Pump_Status").setValue("0");
+                }
+                else if (switchOutsidePump.isChecked()){
+                    serverOutside.child("Pump_Status").setValue("1");
+                }
+            }
+        });
+
+      //  final TextView textView = binding.textHome;
+        homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+            @Override
+            public void onChanged(@Nullable String s) {
+                //textView.setText(s);
+            }
+        });return root;
+
+    }
+
+
+
+
+
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
+    }
+
+}

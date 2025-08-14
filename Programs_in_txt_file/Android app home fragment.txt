@@ -1,0 +1,860 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+    <LinearLayout
+        android:id="@+id/mainLinearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/room1Card1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:addStatesFromChildren="false"
+            android:animateLayoutChanges="true"
+            android:backgroundTintMode="add"
+            android:clipToPadding="false"
+            android:foregroundGravity="center"
+            app:cardBackgroundColor="#D7FFD600"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="5dp"
+            app:cardPreventCornerOverlap="false"
+            app:cardUseCompatPadding="true"
+            app:contentPadding="5dp">
+
+            <LinearLayout
+                android:id="@+id/room1Card1LinearLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TableLayout
+                    android:id="@+id/room1Card1LinearLayout1Table1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableRow
+                        android:id="@+id/room1Card1LinearLayout1Table1Row1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#A8FF8C00"
+                        android:gravity="fill">
+
+                        <TextView
+                            android:id="@+id/room1Card1LinearLayout1Table1Row1Text1"
+                            android:layout_width="46dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="sans-serif"
+                            android:paddingLeft="10dp"
+                            android:text="Dryer Room 1"
+                            android:textColor="#000000"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/room1Card1LinearLayout1Table1Row1Text2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="110dp"
+                            android:layout_weight="1"
+                            android:text="ONLINE"
+                            android:textColor="#FFFFFF"
+                            android:textSize="16sp"
+                            android:textStyle="italic" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/room1Card1LinearLayout1Table1Row2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="fill">
+
+                        <ImageView
+                            android:id="@+id/room1Card1LinearLayout1Table1Row2Image1"
+                            android:layout_width="174dp"
+                            android:layout_height="60dp"
+                            android:src="@mipmap/ic_temp_icon_foreground" />
+
+                        <ImageView
+                            android:id="@+id/room1Card1LinearLayout1Table1Row2Image2"
+                            android:layout_width="192dp"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/ic_humidity_icon_foreground" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/room1Card1LinearLayout1Table1Row3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#FFD600"
+                        android:gravity="fill">
+
+                        <TextView
+                            android:id="@+id/room1Card1LinearLayout1Table1Row3Text1"
+                            android:layout_width="199dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:gravity="center"
+                            android:text="29.2*C"
+                            android:textAllCaps="false"
+                            android:textColor="#000000"
+                            android:textSize="48sp" />
+
+                        <TextView
+                            android:id="@+id/room1Card1LinearLayout1Table1Row3Text2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:gravity="center"
+                            android:text="45%"
+                            android:textAlignment="center"
+                            android:textColor="#000000"
+                            android:textSize="48sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/room1Card1LinearLayout1Table1Row4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right">
+
+                    </TableRow>
+                </TableLayout>
+
+                <TableLayout
+                    android:id="@+id/room1Card1LinearLayout1Table2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TableRow
+                        android:id="@+id/room1Card1LinearLayout1Table2Row1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/room1Card1LinearLayout1Table2Row1Image1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_baseline_arrow_upward_24" />
+
+                        <TextView
+                            android:id="@+id/room1Card1LinearLayout1Table3Row1Text1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:text="30.1*C" />
+
+                        <ImageView
+                            android:id="@+id/room1Card1LinearLayout1Table2Row1Image2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_baseline_arrow_downward_24" />
+
+                        <TextView
+                            android:id="@+id/room1Card1LinearLayout1Table2Row1Text2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="4dp"
+                            android:text="25.0*C" />
+
+                        <View
+                            android:id="@+id/room1Card1LinearLayout1Table2Row1Divider1"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginRight="30dp"
+                            android:background="?android:attr/listDivider" />
+
+                        <ImageView
+                            android:id="@+id/room1Card1LinearLayout1Table2Row1Image3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_baseline_arrow_upward_24" />
+
+                        <TextView
+                            android:id="@+id/room1Card1LinearLayout1Table3Row1Text3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:text="70%" />
+
+                        <ImageView
+                            android:id="@+id/room1Card1LinearLayout1Table2Row1Image4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_baseline_arrow_downward_24" />
+
+                        <TextView
+                            android:id="@+id/room1Card1LinearLayout1Table3Row1Text4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:text="40%" />
+                    </TableRow>
+
+
+                </TableLayout>
+
+                <TableLayout
+                    android:id="@+id/room1Card1LinearLayout1Table3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TableRow
+                        android:id="@+id/room1Card1LinearLayout1Table3Row1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal">
+
+                        <ImageView
+                            android:id="@+id/room1Card1LinearLayout1Table3Row1Image1"
+                            android:layout_width="65dp"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/ic_fan_foreground" />
+
+                        <Switch
+                            android:id="@+id/room1Card1LinearLayout1Table3Row1Switch1"
+                            android:layout_width="104dp"
+                            android:layout_height="match_parent"
+                            android:text="Fan1" />
+
+                        <ImageView
+                            android:id="@+id/room1Card1LinearLayout1Table3Row1Image2"
+                            android:layout_width="71dp"
+                            android:layout_height="33dp"
+                            android:src="@mipmap/ic_valve_foreground" />
+
+                        <Switch
+                            android:id="@+id/room1Card1LinearLayout1Table3Row1Switch2"
+                            android:layout_width="97dp"
+                            android:layout_height="match_parent"
+                            android:text="Valve1" />
+                    </TableRow>
+
+                </TableLayout>
+
+                <TableLayout
+                    android:id="@+id/room1Card1LinearLayout1Table4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#a8ff8c00">
+
+                    <TableRow
+                        android:id="@+id/room1Card1LinearLayout1Table4Row1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/room1Card1LinearLayout1Table4Row1Text1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Last updated on " />
+
+                        <TextView
+                            android:id="@+id/room1Card1LinearLayout1Table4Row1Text2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="20 Nov 2021 10:23 PM" />
+                    </TableRow>
+
+                </TableLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/room2Card1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:addStatesFromChildren="false"
+            android:animateLayoutChanges="true"
+            android:backgroundTintMode="add"
+            android:clipToPadding="false"
+            android:foregroundGravity="center"
+            app:cardBackgroundColor="#D7FFD600"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="5dp"
+            app:cardPreventCornerOverlap="false"
+            app:cardUseCompatPadding="true"
+            app:contentPadding="5dp">
+
+            <LinearLayout
+                android:id="@+id/room2Card1LinearLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TableLayout
+                    android:id="@+id/room2Card1LinearLayout1Table1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableRow
+                        android:id="@+id/room2Card1LinearLayout1Table1Row1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#A8FF8C00"
+                        android:gravity="fill">
+
+                        <TextView
+                            android:id="@+id/room2Card1LinearLayout1Table1Row1Text1"
+                            android:layout_width="46dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="sans-serif"
+                            android:paddingLeft="10dp"
+                            android:text="Dryer Room 2"
+                            android:textColor="#000000"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/room2Card1LinearLayout1Table1Row1Text2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="110dp"
+                            android:layout_weight="1"
+                            android:text="ONLINE"
+                            android:textColor="#FFFFFF"
+                            android:textSize="16sp"
+                            android:textStyle="italic" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/room2Card1LinearLayout1Table1Row2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="fill">
+
+                        <ImageView
+                            android:id="@+id/room2Card1LinearLayout1Table1Row2Image1"
+                            android:layout_width="174dp"
+                            android:layout_height="60dp"
+                            android:src="@mipmap/ic_temp_icon_foreground" />
+
+                        <ImageView
+                            android:id="@+id/room2Card1LinearLayout1Table1Row2Image2"
+                            android:layout_width="192dp"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/ic_humidity_icon_foreground" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/room2Card1LinearLayout1Table1Row3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#FFD600"
+                        android:gravity="fill">
+
+                        <TextView
+                            android:id="@+id/room2Card1LinearLayout1Table1Row3Text1"
+                            android:layout_width="199dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:gravity="center"
+                            android:text="29.2*C"
+                            android:textAlignment="center"
+                            android:textColor="#000000"
+                            android:textSize="48sp" />
+
+                        <TextView
+                            android:id="@+id/room2Card1LinearLayout1Table1Row3Text2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:gravity="center"
+                            android:text="45%"
+                            android:textAlignment="center"
+                            android:textColor="#000000"
+                            android:textSize="48sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/room2Card1LinearLayout1Table1Row5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right">
+
+                    </TableRow>
+                </TableLayout>
+
+                <TableLayout
+                    android:id="@+id/room2Card1LinearLayout1Table2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TableRow
+                        android:id="@+id/room2Card1LinearLayout1Table2Row1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/room2Card1LinearLayout1Table2Row1Image1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_baseline_arrow_upward_24" />
+
+                        <TextView
+                            android:id="@+id/room2Card1LinearLayout1Table3Row1Text1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:text="30.1*C" />
+
+                        <ImageView
+                            android:id="@+id/room2Card1LinearLayout1Table2Row1Image2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_baseline_arrow_downward_24" />
+
+                        <TextView
+                            android:id="@+id/room2Card1LinearLayout1Table2Row1Text2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="4dp"
+                            android:text="25.0*C" />
+
+                        <View
+                            android:id="@+id/room2Card1LinearLayout1Table2Row1Divider1"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginRight="30dp"
+                            android:background="?android:attr/listDivider" />
+
+                        <ImageView
+                            android:id="@+id/room2Card1LinearLayout1Table2Row1Image3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_baseline_arrow_upward_24" />
+
+                        <TextView
+                            android:id="@+id/room2Card1LinearLayout1Table3Row1Text3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:text="70%" />
+
+                        <ImageView
+                            android:id="@+id/room2Card1LinearLayout1Table2Row1Image4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_baseline_arrow_downward_24" />
+
+                        <TextView
+                            android:id="@+id/room2Card1LinearLayout1Table3Row1Text4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:text="40%" />
+                    </TableRow>
+
+
+                </TableLayout>
+
+                <TableLayout
+                    android:id="@+id/room2Card1LinearLayout1Table3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TableRow
+                        android:id="@+id/room2Card1LinearLayout1Table3Row1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal">
+
+                        <ImageView
+                            android:id="@+id/room2Card1LinearLayout1Table3Row1Image1"
+                            android:layout_width="65dp"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/ic_fan_foreground" />
+
+                        <Switch
+                            android:id="@+id/room2Card1LinearLayout1Table3Row1Switch1"
+                            android:layout_width="104dp"
+                            android:layout_height="match_parent"
+                            android:text="Fan2" />
+
+                        <ImageView
+                            android:id="@+id/room2Card1LinearLayout1Table3Row1Image2"
+                            android:layout_width="71dp"
+                            android:layout_height="33dp"
+                            android:src="@mipmap/ic_valve_foreground" />
+
+                        <Switch
+                            android:id="@+id/room2Card1LinearLayout1Table3Row1Switch2"
+                            android:layout_width="97dp"
+                            android:layout_height="match_parent"
+                            android:text="Valve2" />
+                    </TableRow>
+                </TableLayout>
+
+                <TableLayout
+                    android:id="@+id/room2Card1LinearLayout1Table4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#A8FF8C00">
+
+                    <TableRow
+                        android:id="@+id/room2Card1LinearLayout1Table4Row1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/room2Card1LinearLayout1Table4Row1Text1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Last updated on " />
+
+                        <TextView
+                            android:id="@+id/room2Card1LinearLayout1Table4Row1Text2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="20 Nov 2021 10:23 PM" />
+                    </TableRow>
+
+                </TableLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/outside1Card1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:addStatesFromChildren="false"
+            android:animateLayoutChanges="true"
+            android:backgroundTintMode="add"
+            android:clipToPadding="false"
+            android:foregroundGravity="center"
+            app:cardBackgroundColor="#D7FFD600"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="5dp"
+            app:cardPreventCornerOverlap="false"
+            app:cardUseCompatPadding="true"
+            app:contentPadding="5dp">
+
+            <LinearLayout
+                android:id="@+id/outside1Card1LinearLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TableLayout
+                    android:id="@+id/outside1Card1LinearLayout1Table1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableRow
+                        android:id="@+id/outside1Card1LinearLayout1Table1Row1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#A8FF8C00"
+                        android:gravity="fill">
+
+                        <TextView
+                            android:id="@+id/outside1Card1LinearLayout1Table1Row1Text1"
+                            android:layout_width="46dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="sans-serif"
+                            android:paddingLeft="10dp"
+                            android:text="Outside"
+                            android:textColor="#000000"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/outside1Card1LinearLayout1Table1Row1Text2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="110dp"
+                            android:layout_weight="1"
+                            android:text="ONLINE"
+                            android:textColor="#FFFFFF"
+                            android:textSize="16sp"
+                            android:textStyle="italic" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/outside1Card1LinearLayout1Table1Row2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="fill">
+
+                        <ImageView
+                            android:id="@+id/outside1Card1LinearLayout1Table1Row2Image1"
+                            android:layout_width="192dp"
+                            android:layout_height="60dp"
+                            android:src="@mipmap/ic_temp_icon_foreground" />
+
+                        <ImageView
+                            android:id="@+id/outside1Card1LinearLayout1Table1Row2Image2"
+                            android:layout_width="192dp"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/ic_humidity_icon_foreground" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/outside1Card1LinearLayout1Table1Row3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#FFD600"
+                        android:gravity="fill">
+
+                        <TextView
+                            android:id="@+id/outside1Card1LinearLayout1Table1Row3Text1"
+                            android:layout_width="199dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:gravity="center"
+                            android:text="29.2*C"
+                            android:textAlignment="center"
+                            android:textColor="#000000"
+                            android:textSize="48sp" />
+
+                        <TextView
+                            android:id="@+id/outside1Card1LinearLayout1Table1Row3Text2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:gravity="center"
+                            android:text="45%"
+                            android:textAlignment="center"
+                            android:textColor="#000000"
+                            android:textSize="48sp" />
+                    </TableRow>
+                </TableLayout>
+
+                <TableLayout
+                    android:id="@+id/outside1Card1LinearLayout1Table2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TableRow
+                        android:id="@+id/outside1Card1LinearLayout1Table2Row1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/outside1Card1LinearLayout1Table2Row1Image1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_baseline_arrow_upward_24" />
+
+                        <TextView
+                            android:id="@+id/outside1Card1LinearLayout1Table3Row1Text1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:text="30.1*C" />
+
+                        <ImageView
+                            android:id="@+id/outside1Card1LinearLayout1Table2Row1Image2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_baseline_arrow_downward_24" />
+
+                        <TextView
+                            android:id="@+id/outside1Card1LinearLayout1Table2Row1Text2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="4dp"
+                            android:text="25.0*C" />
+
+                        <View
+                            android:id="@+id/outside1Card1LinearLayout1Table2Row1Divider1"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginRight="30dp"
+                            android:background="?android:attr/listDivider" />
+
+                        <ImageView
+                            android:id="@+id/outside1Card1LinearLayout1Table2Row1Image3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_baseline_arrow_upward_24" />
+
+                        <TextView
+                            android:id="@+id/outside1Card1LinearLayout1Table3Row1Text3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:text="70%" />
+
+                        <ImageView
+                            android:id="@+id/outside1Card1LinearLayout1Table2Row1Image4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_baseline_arrow_downward_24" />
+
+                        <TextView
+                            android:id="@+id/outside1Card1LinearLayout1Table3Row1Text4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:text="40%" />
+                    </TableRow>
+                </TableLayout>
+
+                <TableLayout
+                    android:id="@+id/outside1Card1LinearLayout1Table3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TableRow
+                        android:id="@+id/outside1Card1LinearLayout1Table3Row1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/outside1Card1LinearLayout1Table3Row1Image1"
+                            android:layout_width="93dp"
+                            android:layout_height="60dp"
+                            android:layout_marginLeft="50dp"
+                            android:src="@mipmap/ic_pump_foreground" />
+
+                        <Switch
+                            android:id="@+id/outside1Card1LinearLayout1Table3Row1Switch1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="50dp"
+                            android:text="Water Pump" />
+
+                    </TableRow>
+                </TableLayout>
+
+                <TableLayout
+                    android:id="@+id/outside1Card1LinearLayout1Table4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#A8FF8C00">
+
+                    <TableRow
+                        android:id="@+id/outside1Card1LinearLayout1Table4Row1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/outside1Card1LinearLayout1Table4Row1Text1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Last updated on " />
+
+                        <TextView
+                            android:id="@+id/outside1Card1LinearLayout1Table4Row1Text2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="20 Nov 2021 10:23 PM" />
+                    </TableRow>
+
+                </TableLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/footerLine1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/footerLine1Text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Crafted with"
+                android:textColor="#000000"
+                android:textSize="10sp" />
+
+            <ImageView
+                android:id="@+id/footerLine1Image1"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/ic_love_foreground" />
+
+            <TextView
+                android:id="@+id/footerLine1Text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="by XIOTAS"
+                android:textColor="#000000"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/footerLine2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="60dp"
+            android:gravity="center|center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/footerLine2Text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="Developed by "
+                android:textColor="#000000"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/footerLine2Text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="YADUKRISHNAN K M"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

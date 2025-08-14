@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/forgotpasswordLinearLayout1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center|center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/forgotpasswordLinearLayout1Image1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="4dp"
+            app:srcCompat="@mipmap/ic_forgotpassword_foreground" />
+
+        <TextView
+            android:id="@+id/forgotpasswordLinearLayout1Text1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Forgot Your"
+            android:textAlignment="center"
+            android:textColor="@color/purple_700"
+            android:textSize="34sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/forgotpasswordLinearLayout1Text2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="Password ?"
+            android:textAlignment="center"
+            android:textColor="@color/purple_700"
+            android:textSize="34sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/forgotpasswordLinearLayout1Text3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="That's ok..."
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/forgotpasswordLinearLayout1Text4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="We just need your registered email address"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/forgotpasswordLinearLayout1Text5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="to send you a link to reset your password."
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/forgotpasswordLinearLayout1Card1Linearlayout1Text1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="35dp"
+            android:backgroundTint="#0026FD"
+            android:ems="10"
+            android:hint="Email"
+            android:inputType="textEmailAddress" />
+
+        <Button
+            android:id="@+id/forgotpasswordLinearLayout1Card1Linearlayout1Text2"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="15dp"
+            android:backgroundTint="@color/purple_700"
+            android:text="Submit"
+            app:cornerRadius="25dp" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:text="Don't Have an Account ? Signup Now !"
+            android:textAlignment="center"
+            android:textColor="#0044FF" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="35dp"
+            android:text='" Energy Conservation is the Foundation of Energy Independance "'
+            android:textAlignment="center"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="- Tom Allen"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="...Xiotas Solar Drayer Automation Project..."
+            android:textAlignment="center"
+            android:textSize="12sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/forgotpasswordLinearLayout1Text6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="60dp"
+            android:text="From the House of Xiotas"
+            android:textAlignment="center"
+            android:textSize="14sp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

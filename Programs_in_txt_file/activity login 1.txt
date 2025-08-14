@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.LoginActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/loginCard1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="#DAFFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/loginCard1Linearlayout1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/loginCard1Linearlayout1Text1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="50dp"
+                    android:text="WELCOME!"
+                    android:textAlignment="center"
+                    android:textColor="@color/purple_700"
+                    android:textSize="34sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/loginCard1Linearlayout1Text2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:text="Please Login to Continue"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/loginCard1Linearlayout1Text3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:text="LOGIN"
+                    android:textAlignment="center"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/loginCard1Linearlayout1Edittext1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:backgroundTint="#0026FB"
+                    android:ems="10"
+                    android:hint="e-mail address"
+                    android:inputType="textEmailAddress" />
+
+                <EditText
+                    android:id="@+id/loginCard1Linearlayout1Edittext2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:backgroundTint="#0026FF"
+                    android:ems="10"
+                    android:hint="password"
+                    android:inputType="textPassword" />
+
+                <TextView
+                    android:id="@+id/loginCard1Linearlayout1Text4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:paddingRight="20dp"
+                    android:text="Forgot password ?"
+                    android:textAlignment="textEnd"
+                    android:textColor="#0044FF" />
+
+                <Button
+                    android:id="@+id/loginCard1Linearlayout1Button1"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:backgroundTint="@color/purple_700"
+                    android:text="LOGIN"
+                    app:cornerRadius="25dp" />
+
+                <LinearLayout
+                    android:id="@+id/loginCard1Linearlayout1Linearlayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:id="@+id/loginCard1Linearlayout1Linearlayout1Divider1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_weight="2"
+                        android:background="?android:attr/listDivider" />
+
+                    <TextView
+                        android:id="@+id/loginCard1Linearlayout1Linearlayout1Text1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="0"
+                        android:text="OR" />
+
+                    <View
+                        android:id="@+id/loginCard1Linearlayout1Linearlayout1Divider2"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_weight="2"
+                        android:background="?android:attr/listDivider" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/loginCard1Linearlayout1Text5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:text="Continue with Google"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="#0043FD"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/loginCard1Linearlayout1Image1"
+                    android:layout_width="52dp"
+                    android:layout_height="41dp"
+                    app:srcCompat="@mipmap/ic_google_foreground" />
+
+                <TextView
+                    android:id="@+id/loginCard1Linearlayout1Text6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:clickable="true"
+                    android:text="Don't have an account ? create now !"
+                    android:textAlignment="center" />
+
+                <Button
+                    android:id="@+id/loginCard1Linearlayout1Button2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/purple_700"
+                    android:text="Signup Now"
+                    app:cornerRadius="25dp" />
+
+                <TextView
+                    android:id="@+id/loginCard1Linearlayout1Text7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="60dp"
+                    android:text="...Xiotas solar drayer automation project..."
+                    android:textAlignment="center"
+                    android:textSize="12sp"
+                    android:textStyle="italic" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
