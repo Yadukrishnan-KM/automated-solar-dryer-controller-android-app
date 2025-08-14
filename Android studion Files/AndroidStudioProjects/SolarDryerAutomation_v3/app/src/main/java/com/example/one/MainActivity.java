@@ -1,0 +1,156 @@
+package com.example.one;
+
+import android.content.Context;
+
+import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.os.Bundle;
+
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
+
+import android.widget.Toast;
+import android.widget.Toolbar;
+
+
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.navigation.ui.AppBarConfiguration;
+import androidx.navigation.ui.NavigationUI;
+
+import com.example.one.databinding.ActivityMainBinding;
+import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+
+import java.util.Objects;
+
+
+public class MainActivity extends AppCompatActivity {
+
+    DrawerLayout drawerLayout;
+    Toolbar toolbar;
+    NavigationView navigationView;
+    ActionBarDrawerToggle actionBarDrawerToggle;
+    ImageView deviceSettingClick;
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        com.example.one.databinding.ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+
+        BottomNavigationView navView = findViewById(R.id.nav_view);
+        drawerLayout = findViewById(R.id.drawer_Layout);
+        navigationView = findViewById(R.id.navigation_view);
+
+        Objects.requireNonNull(getSupportActionBar()).setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        getSupportActionBar().setDisplayShowCustomEnabled(true);
+        getSupportActionBar().setCustomView(R.layout.top_actionbar);
+        View view = getSupportActionBar().getCustomView();
+
+        actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout,R.string.menu_open,R.string.menu_close);
+        drawerLayout.addDrawerListener(actionBarDrawerToggle);
+        actionBarDrawerToggle.syncState();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        isOnline();
+        offlineDialogBox();
+
+        deviceSettingClick = findViewById(R.id.actionbarDeviceSetting);
+        deviceSettingClick.setOnClickListener(v -> Toast.makeText(MainActivity.this,"Device Setting Selected",Toast.LENGTH_SHORT).show());
+
+        navigationView.setNavigationItemSelectedListener(item -> {
+            switch (item.getItemId()){
+                case R.id.appsettings:
+                    Toast.makeText(MainActivity.this,"Setting Selected",Toast.LENGTH_SHORT).show();
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                    break;
+                case R.id.devicesettings:
+                    Toast.makeText(MainActivity.this,"Device Setting Selected",Toast.LENGTH_SHORT).show();
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                    break;
+                case R.id.about:
+                    Toast.makeText(MainActivity.this,"About Selected",Toast.LENGTH_SHORT).show();
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                    break;
+                case R.id.help:
+                    Toast.makeText(MainActivity.this,"Help Selected",Toast.LENGTH_SHORT).show();
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                    break;
+                case R.id.share:
+                    Toast.makeText(MainActivity.this,"Share Selected",Toast.LENGTH_SHORT).show();
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                    break;
+                case R.id.logout:
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                    FirebaseAuth.getInstance().signOut();
+                    Toast.makeText(MainActivity.this,"Logout Successfully",Toast.LENGTH_SHORT).show();
+                    Intent intent = new  Intent(MainActivity.this, LoginActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK| Intent.FLAG_ACTIVITY_NEW_TASK);
+                    startActivity(intent);
+                    break;
+
+            }
+            return true;
+        });
+
+
+        // Passing each menu ID as a set of Ids because each
+        // menu should be considered as top level destinations.
+        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
+                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications)
+                .build();
+        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
+        //NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+        NavigationUI.setupWithNavController(binding.navView, navController);
+
+
+    }
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item){
+        if(actionBarDrawerToggle.onOptionsItemSelected(item)){
+            return true;
+        }
+        return  super.onOptionsItemSelected(item);
+    }
+
+    public boolean isOnline(){
+        ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo netInfo = cm.getActiveNetworkInfo();
+        return netInfo != null && netInfo.isConnectedOrConnecting();
+    }
+    public void offlineDialogBox(){
+        if(!isOnline()){
+            android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(MainActivity.this);
+            builder.setMessage("Internet not available, Check your connection and Try again ...");
+            builder.setTitle("No Internet");
+            builder.setIcon(R.mipmap.ic_nonetwok_foreground);
+            builder.setPositiveButton("OK", (dialog, which) -> dialog.dismiss());
+            builder.create();
+            builder.show();
+        }
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+    }
+
+}
+
+
+
